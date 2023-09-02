@@ -14,13 +14,6 @@ let divide = function (x, y) {
   return x / y;
 };
 
-const addBtn = document.getElementById("add");
-const subtractBtn = document.getElementById("subtract");
-const multiplyBtn = document.getElementById("multiply");
-const divideBtn = document.getElementById("divide");
-const equalBtn = document.getElementById("equal")
-
-
 function operate(operator, x, y) {
   switch (operator) {
     case "+":
@@ -36,15 +29,45 @@ function operate(operator, x, y) {
   }
 }
 
-let firstNum;
-let secondNum;
-let operator;
+const addBtn = document.getElementById("add");
+const subtractBtn = document.getElementById("subtract");
+const multiplyBtn = document.getElementById("multiply");
+const divideBtn = document.getElementById("divide");
+const equalBtn = document.getElementById("equal");
+const clearBtn = document.getElementById("clear");
+
+const display = document.getElementById("numberInput");
+
+let firstNum = null;
+let secondNum = null;
+let operator = null;
+let displayValue = "";
+
+const numBtns = document.querySelectorAll(".num-btn");
+
+numBtns.forEach((button) => {
+  button.addEventListener("click", function (event) {
+    const buttonValue = event.target.innerHTML;
+    // displayValue = "";
+    displayValue += buttonValue;
+    display.innerHTML = displayValue;
+  });
+});
+
+clearBtn.addEventListener("click", function () {
+    firstNum = null;
+    secondNum = null;
+    operator = null;
+    displayValue = "";
+    display.innerHTML = "0";
+ });
+ 
 
 //---------------------------------
 //Testing out button functionality.
-let buttons = [addBtn, subtractBtn, multiplyBtn, divideBtn];
-buttons.forEach((button) => {
-  button.addEventListener("click", function () {
-    alert("Hello world");
-  });
-});
+// let buttons = [addBtn, subtractBtn, multiplyBtn, divideBtn];
+// buttons.forEach((button) => {
+//   button.addEventListener("click", function () {
+//     alert("Hello world");
+//   });
+// });
