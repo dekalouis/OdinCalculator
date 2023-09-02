@@ -32,6 +32,8 @@ body {
   margin-bottom: 20px;
   font-size: 20px;
   text-align: right;
+  background-color: #fff;
+  border-radius: 2%;
 }
 
 .button-container {
