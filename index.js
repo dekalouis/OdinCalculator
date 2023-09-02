@@ -18,10 +18,8 @@ const addBtn = document.getElementById("add");
 const subtractBtn = document.getElementById("subtract");
 const multiplyBtn = document.getElementById("multiply");
 const divideBtn = document.getElementById("divide");
+const equalBtn = document.getElementById("equal")
 
-let firstNum;
-let secondNum;
-let operator;
 
 function operate(operator, x, y) {
   switch (operator) {
@@ -37,6 +35,10 @@ function operate(operator, x, y) {
       return "Invalid operator!";
   }
 }
+
+let firstNum;
+let secondNum;
+let operator;
 
 //---------------------------------
 //Testing out button functionality.
