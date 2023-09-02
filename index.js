@@ -53,6 +53,8 @@ numBtns.forEach((button) => {
     display.innerHTML = displayValue;
     console.log("Clicked number button: " + displayValue);
 
+    
+
 
   });
 });
