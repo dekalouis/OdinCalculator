@@ -8,9 +8,17 @@
 body {
   background-color: #000000;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; 
+}
+
+footer {
+  color: #ffffff;
+  text-align: center;
+  padding: 10px; 
+  background-color: #1d2342;
 }
 
 .calculator {
@@ -34,7 +42,6 @@ body {
   font-size: 20px;
   text-align: right;
   border-radius: 5px;
-
 }
 
 .button-container {
@@ -61,6 +68,11 @@ button:hover {
   grid-column: span 2;
 }
 
-.btn-operator{
-  background-color: #4a4c56
+.btn-operator {
+  background-color: #4a4c56;
+}
+
+.selected-operator {
+  background-color: #ffd700;
+  color: #fff;
 }
