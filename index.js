@@ -51,6 +51,9 @@ numBtns.forEach((button) => {
     // displayValue = "";
     displayValue += buttonValue;
     display.innerHTML = displayValue;
+    console.log("Clicked number button: " + displayValue);
+
+
   });
 });
 
